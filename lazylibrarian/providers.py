@@ -172,13 +172,13 @@ def get_capabilities(provider):
                                 provider['MAGCAT'] = ''
                                 if provider['BOOKCAT'] == '7000':
                                     # looks like newznab+, should support book-search
-                                    provider['BOOKSEARCH'] = 'book'
+                                    provider['BOOKSEARCH'] = 'books'
                                     # but check in case
                                     search = data.find('searching/book-search')
                                     if search is not None:
                                         if 'available' in search.attrib:
                                             if search.attrib['available'] == 'yes': 
-                                                provider['BOOKSEARCH'] = 'book'    
+                                                provider['BOOKSEARCH'] = 'books'    
                                             else:
                                                 provider['BOOKSEARCH'] = ''
                                 else:
@@ -189,7 +189,7 @@ def get_capabilities(provider):
                                     if search is not None:
                                         if 'available' in search.attrib:
                                             if search.attrib['available'] == 'yes': 
-                                                provider['BOOKSEARCH'] = 'book'    
+                                                provider['BOOKSEARCH'] = 'books'    
                                             else:
                                                 provider['BOOKSEARCH'] = ''
                                 subcats = cat.getiterator('subcat')
