@@ -493,7 +493,7 @@ def ReturnSearchTypeStructure(provider, api_key, book, searchType, searchMode):
                 "t": provider['GENERALSEARCH'],
                 "apikey": api_key,
                 # this is a general search
-                "q": book['searchterm'],
+                "q": books['searchterm'],
                 "extended": provider['EXTENDED'],
             }
     if params:
