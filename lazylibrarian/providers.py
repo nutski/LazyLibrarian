@@ -476,7 +476,7 @@ def ReturnSearchTypeStructure(provider, api_key, book, searchType, searchMode):
                 "t": provider['MAGSEARCH'],
                 "apikey": api_key,
                 "cat": provider['MAGCAT'],
-                "q": book['searchterm'],
+                "q": books['searchterm'],
                 "extended": provider['EXTENDED'],
             }
         elif provider['GENERALSEARCH'] and provider['MAGCAT']:
@@ -484,7 +484,7 @@ def ReturnSearchTypeStructure(provider, api_key, book, searchType, searchMode):
                "t": provider['GENERALSEARCH'],
                "apikey": api_key,
                "cat": provider['MAGCAT'],
-               "q": book['searchterm'],
+               "q": books['searchterm'],
                "extended": provider['EXTENDED'],
            }
     else:
